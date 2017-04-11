@@ -2,7 +2,8 @@ package mymath_test
 
 import (
 	"testing"
-	"unit-test-talk/tabledriven/mymath"
+
+	"github.com/MahlerFive/go-unittest-talk/tabledriven/mymath"
 )
 
 func TestMultiply(t *testing.T) {
