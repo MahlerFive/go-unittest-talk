@@ -46,7 +46,7 @@ func TestMultiply(t *testing.T) {
 			t.Parallel()
 			actualProduct := mymath.Multiply(tc.Op1, tc.Op2)
 			if actualProduct != tc.ExpectedProduct {
-				t.Errorf("%s: %d * %d = %d, expected %d", tc.Name, tc.Op1, tc.Op2, actualProduct, tc.ExpectedProduct)
+				t.Errorf("%d * %d = %d, expected %d", tc.Op1, tc.Op2, actualProduct, tc.ExpectedProduct)
 			}
 		})
 	}
@@ -92,7 +92,7 @@ func TestAdd(t *testing.T) {
 			t.Parallel()
 			actualSum := mymath.Add(tc.Op1, tc.Op2)
 			if actualSum != tc.ExpectedSum {
-				t.Errorf("%s: %d + %d = %d, expected %d", tc.Name, tc.Op1, tc.Op2, actualSum, tc.ExpectedSum)
+				t.Errorf("%d + %d = %d, expected %d", tc.Op1, tc.Op2, actualSum, tc.ExpectedSum)
 			}
 		})
 	}
@@ -138,7 +138,7 @@ func TestSubtract(t *testing.T) {
 			t.Parallel()
 			actualDifference := mymath.Subtract(tc.Op1, tc.Op2)
 			if actualDifference != tc.ExpectedDifference {
-				t.Errorf("%s: %d + %d = %d, expected %d", tc.Name, tc.Op1, tc.Op2, actualDifference, tc.ExpectedDifference)
+				t.Errorf("%d + %d = %d, expected %d", tc.Op1, tc.Op2, actualDifference, tc.ExpectedDifference)
 			}
 		})
 	}

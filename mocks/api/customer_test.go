@@ -68,10 +68,10 @@ func TestCreateCustomer(t *testing.T) {
 			customerAPI := api.NewCustomerAPI(store)
 			err := customerAPI.CreateCustomer(tc.Customer)
 			if err == nil && tc.ExpectedError {
-				t.Errorf("%s: Expected error, but got none", tc.TestName)
+				t.Error("Expected error, but got none")
 			}
 			if err != nil && !tc.ExpectedError {
-				t.Errorf("%s: Got error %s, but expected none", tc.TestName, err)
+				t.Errorf("Got error %s, but expected none", err)
 			}
 		})
 	}
@@ -137,13 +137,13 @@ func TestGetCustomer(t *testing.T) {
 			customerAPI := api.NewCustomerAPI(store)
 			customer, err := customerAPI.GetCustomer(tc.ID)
 			if err == nil && tc.ExpectedError {
-				t.Errorf("%s: Expected error, but got none", tc.TestName)
+				t.Error("Expected error, but got none")
 			}
 			if err != nil && !tc.ExpectedError {
-				t.Errorf("%s: Got error %s, but expected none", tc.TestName, err)
+				t.Errorf("Got error %s, but expected none", err)
 			}
 			if !reflect.DeepEqual(customer, tc.ExpectedCustomer) {
-				t.Errorf("%s: expected customer %+v, actual customer %+v", tc.ExpectedCustomer, customer)
+				t.Errorf("expected customer %+v, actual customer %+v", tc.ExpectedCustomer, customer)
 			}
 		})
 	}
